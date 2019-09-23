@@ -1,0 +1,21 @@
+
+How do we run the code in our project?
+> go run *.go  - compiles and runs go program (one or two files)
+> go build *.go  - compiles go program and creates executable file
+
+What does 'package main' mean (what is a go package)?
+> package == project == workspace
+> a package is a group of go files (a project/service)
+> all included files must include statement referencing package name
+> Executable package type - When compiled, spits out executable file (package named 'main')
+> Reusable package type - Code dependencies/helpers/utilities
+
+What does 'import "fmt"' mean?
+> fmt is a standard go library for logging and other utility functions
+> "Package fmt implements formatted I/O with functions analogous to C's
+printf and scanf. The format 'verbs' are derived from C's but are simpler."
+
+How is the main.go file organized?
+> package declaration
+> any needed imports
+> declare variables and functions and write logic
