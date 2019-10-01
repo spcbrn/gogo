@@ -1,10 +1,10 @@
 package main
 
-import "fmt"
-
 func main() {
-	card := newCard()
-	fmt.Println(card)
+	cards := newDeck()
+	cards.shuffle()
+	cards.addCard("SSHHIITTEEPPIILLEEEEEEE")
+	cards.print()
 }
 
 func newCard() string {

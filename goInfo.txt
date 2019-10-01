@@ -19,3 +19,10 @@ How is the main.go file organized?
 > package declaration
 > any needed imports
 > declare variables and functions and write logic
+
+
+
+
+Array - fixed length
+Slice - dynamic
+ *both must contain only a single data type
