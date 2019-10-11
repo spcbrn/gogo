@@ -6,22 +6,14 @@ import (
 	"os"
 )
 
-/*
-
-- read in contents of a file on execution
-- reference os.Args and os/#Open
-- acknowledge what interface File type implements
-- if 'Reader', reuse Copy func?
-
-*/
-
-type logWriter struct{}
+// type termWrite struct{}
 
 func main() {
 	fPath := os.Args[1]
-	file := getFile(fPath)
-	lw := logWriter{}
-	io.Copy(lw, file)
+	f := getFile(fPath)
+	// lw := termWrite{}
+	fmt.Println(fPath, "contents:")
+	io.Copy(os.Stdout, f)
 }
 
 func getFile(path string) *os.File {
@@ -33,8 +25,7 @@ func getFile(path string) *os.File {
 	return file
 }
 
-func (logWriter) Write(bs []byte) (int, error) {
-	fmt.Println(string(bs))
-	fmt.Println("Just wrote", len(bs), "bytes.")
-	return len(bs), nil
-}
+// func (termWrite) Write(bs []byte) (int, error) {
+// 	fmt.Println(string(bs))
+// 	return len(bs), nil
+// }
